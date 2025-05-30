@@ -8,6 +8,19 @@
     <title>{{ .Site.Title }}</title>
     {{ $style := resources.Get "saas/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    <!-- Meta Tags for Link Preview -->
+    <meta property="og:title" content="Ordination Dr. Tom Laube - Facharzt für Allgemeinmedizin und Unfallchirurgie">
+    <meta property="og:description" content="Besuchen Sie unsere Ordination in Pasching für umfassende allgemeinmedizinische und unfallchirurgische Betreuung.">
+    <meta property="og:image" content="https://andlenz.github.io/test-hugo/images/dr_tom_laube.png">
+    <meta property="og:url" content="http://ordi-dr-laube.at/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="Besuchen Sie unsere Ordination in Pasching für umfassende allgemeinmedizinische und unfallchirurgische Betreuung.">
+    <meta name="twitter:title" content="Ordination Dr. Tom Laube">
+    <meta name="twitter:description" content="Facharzt für Allgemeinmedizin und Unfallchirurgie in Graz">
+    <meta name="twitter:image" content="https://andlenz.github.io/test-hugo/images/dr_tom_laube.png">
+
 </head>
 
 <body>
