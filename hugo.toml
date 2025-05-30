@@ -1,4 +1,5 @@
-baseURL = 'https://andlenz.github.io/test-hugo/'
+baseURL = '/'
+relativeURLs = true
 languageCode = 'en-us'
 title = 'Ordination Dr. Tom Laube - Facharzt für Allgemeinmedizin und Unfallchirurgie'
 
