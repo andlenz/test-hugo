@@ -1,0 +1,64 @@
+   medical_specialty: "Facharzt für Allgemeinmedizin und Unfallchirurgie"
+
+   opening_hours:
+     - id: monday 
+       day: Montag
+       enabled: true
+       morning: "07:30–11:30"
+       afternoon: "-"
+     - id: tuesday 
+       day: Dienstag
+       enabled: true
+       morning: "07:30–11:30"
+       afternoon: "16:00–18:00"
+     - id: wendsday
+       day: Mittwoch
+       enabled: true
+       morning: "07:30–11:30"
+       afternoon: "-"
+     - id: thursday
+       day: Donnerstag
+       enabled: true
+       morning: "07:30–11:30"
+       afternoon: "16:00–18:00"
+     - id: friday
+       day: Freitag
+       enabled: true
+       morning: "07:30–11:30"
+       afternoon: "-"
+     - id: saturday
+       day: Samstag
+       enabled: false
+       morning: "-"
+       afternoon: "-"
+     - id: sunday
+       day: Sonntag
+       enabled: false
+       morning: "-"
+       afternoon: "-"
+
+   last_checkin:
+      amount: 10
+      unit: Minuten
+      note: Letzte Anmeldung ist bis {{amount}} {{unit}} vor Ordinationsende möglich.
+   after_hours_info: "Außerhalb der Ordinationszeiten wenden Sie sich bitte telefonisch an den Ärztenotdienst unter <strong>141</strong> oder die Gesundheitsberatung <strong>1450</strong>."
+
+   insurance_providers:
+     - KFA
+     - SVS
+     - ÖGK
+     - BVAEB
+
+   vacation:
+     enabled: true
+     start: "01.08.2025"
+     end: "15.08.2025"
+     
+
+   contact:
+     phone: "07229 / 61074"
+     email: "tom@ordi-dr-laube.at"
+     address: 
+      street: "St. Niedermayrstrasse 19"
+      zipcode: "4061"
+      city: "Pasching"

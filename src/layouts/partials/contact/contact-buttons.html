@@ -1,0 +1,19 @@
+<section id="contact">
+    <div class="contact">
+        <button class="contact-button">
+            <span class="contact-icon"><img src="/images/icon-phone.svg" alt="Telefonnummer"></span>
+            <span>{{ .contact.phone }}</span>
+        </button>
+        <button class="contact-button">
+            <span class="contact-icon"><img src="/images/icon-email.svg" alt="E-Mail"></span>
+            <span>{{ .contact.email }}</span>
+        </button>
+        <button class="contact-button">
+            <span class="contact-icon"><img src="/images/icon-address.svg" alt="Adresse"></span>
+            <div style="text-align: left;">
+                {{ .contact.address.street | markdownify }} <br>
+                {{ .contact.address.zipcode | markdownify }} {{ .contact.address.city | markdownify }}
+            </div>
+        </button>
+    </div>
+</section>

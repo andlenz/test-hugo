@@ -1,0 +1,45 @@
+{{ $info := .Site.Data.info }}
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    {{ $style := resources.Get "saas/main.scss" | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="column left">
+                <div class="logo-container">
+                    <div class="logo">
+                        <div></div><img src="/images/dr_laube_logo3.svg" alt="Dr. Laube, Facharzt für Allgemeinmedizin">
+                    </div>
+                    <span class="subtitle">{{ $info.medical_specialty}}</span>
+                    <div class="address">
+                        {{ $info.contact.address.street | markdownify }}<br>
+                        {{ $info.contact.address.zipcode | markdownify }} {{ $info.contact.address.city | markdownify }}
+                        {{ partial "information/vacation.html" $info }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="column right">
+                <div class="information">
+                    {{ partial "information/opening-hours.html" $info }}
+                    {{ partial "information/last-checkin.html" $info }}
+                    {{ partial "information/after-hours.html" $info }}
+                    {{ partial "information/health-insurance.html" $info }}
+                    {{ partial "contact/contact-buttons.html" $info }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

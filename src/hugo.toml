@@ -1,0 +1,5 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Ordination Dr. Tom Laube - Facharzt für Allgemeinmedizin und Unfallchirurgie'
+
+disableKinds = ["taxonomy", "term"]

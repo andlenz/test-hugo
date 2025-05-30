@@ -1,0 +1,25 @@
+{{/* Opening Hours Table with Highlighted Today Row */}}
+{{ $today := lower (now.Format "Monday") }}
+<div class="opening-hours">
+    <h3>ÖFFNUNGSZEITEN</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Vormittag</th>
+                <th>Nachmittag</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range .opening_hours }}
+                {{ if .enabled }}
+                <tr class="{{ if eq (lower .id) $today }}today{{ end }}">
+                    <td class="day">{{ .day }}</td>
+                    <td>{{ .morning }}</td>
+                    <td>{{ .afternoon }}</td>
+                </tr>
+                {{ end }}
+            {{ end }}
+        </tbody>
+    </table>
+</div>
