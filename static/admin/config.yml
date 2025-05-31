@@ -73,7 +73,9 @@ collections:
             widget: "list"
             collapsed: false
             label_singular: "Insurance Provider"
-            field: { label: "Krankenkasse", name: "", widget: "string" }
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Website", name: "url", widget: "string" }
 
       - label: "Letzte Anmeldung"
         name: "last_checkin"
@@ -84,10 +86,12 @@ collections:
           - { label: "Hinweis", name: "note", widget: "string" }
 
       - label: "Notdienst Info"
-        name: "after_hours_info"
-        file: "data/after_hours_info.yml"
+        name: "after_hours"
+        file: "data/after_hours.yml"
         fields:
-          - { label: "Information", name: "after_hours_info", widget: "text" }
+          - { label: "Notdienst Telefonnr", name: "notdienst_tel", widget: "text" }
+          - { label: "Gesundheitsberatung Telefonnr", name: "gesundheitsberatung_tel", widget: "text" }
+          - { label: "Information", name: "info", widget: "text" }
 
       - label: "Fachbereich"
         name: "medical_specialty"

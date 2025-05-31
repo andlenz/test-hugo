@@ -1,10 +1,10 @@
-{{ $notdienst := .notdienst }}
-{{ $gesundheitsberatung := .gesundheitsberatung }}
+{{ $notdienst := .notdienst_tel }}
+{{ $gesundheitsberatung := .gesundheitsberatung_tel }}
 
 {{ $notdienstLink := printf "<a href=\"tel:%d\"><strong>%d</strong></a>" $notdienst $notdienst }}
 {{ $gesundheitsberatungLink := printf "<a href=\"tel:%d\"><strong>%d</strong></a>" $gesundheitsberatung $gesundheitsberatung }}
 
 {{ $infoTemplate := .info }}
-{{ $note := replace (replace $infoTemplate "{{notdienst}}" $notdienstLink) "{{gesundheitsberatung}}" $gesundheitsberatungLink }}
+{{ $note := replace (replace $infoTemplate "{{notdienst_tel}}" $notdienstLink) "{{gesundheitsberatung_tel}}" $gesundheitsberatungLink }}
 
 <div class="after-hours-info">{{ $note | safeHTML }}</div>
