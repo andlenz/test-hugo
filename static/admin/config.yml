@@ -1,18 +1,96 @@
 backend:
   name: git-gateway
   branch: netlify-cms
+  local_backend: true
 media_folder: static/images
 public_folder: /imgaes
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: "siteinfo"
+    label: "Praxis Info"
+    files:
+      - label: "Kontakt"
+        name: "contact"
+        file: "data/contact.yml"
+        fields:
+          - label: "Telefon"
+            name: "phone"
+            widget: "string"
+          - label: "E-Mail"
+            name: "email"
+            widget: "string"
+          - label: "Adresse"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "Straße", name: "street", widget: "string" }
+              - { label: "PLZ", name: "zipcode", widget: "string" }
+              - { label: "Ort", name: "city", widget: "string" }
+
+      - label: "Urlaub"
+        name: "vacation"
+        file: "data/vacation.yml"
+        fields:
+          - { label: "Aktiviert", name: "enabled", widget: "boolean" }
+          - {
+              label: "Startdatum",
+              name: "start",
+              widget: "datetime",
+              format: "DD.MM.YYYY",
+              date_format: "DD.MM.YYYY",
+              time_format: false,
+            }
+          - {
+              label: "Enddatum",
+              name: "end",
+              widget: "datetime",
+              format: "DD.MM.YYYY",
+              date_format: "DD.MM.YYYY",
+              time_format: false,
+            }
+
+      - label: "Öffnungszeiten"
+        name: "zeiten"
+        file: "data/opening_hours.yml"
+        fields:
+          - label: "Öffnungszeiten"
+            name: "opening_hours"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Tag", name: "day", widget: "string" }
+              - { label: "Anzeigen", name: "enabled", widget: "boolean" }
+              - { label: "Vormittag", name: "morning", widget: "string" }
+              - { label: "Nachmittag", name: "afternoon", widget: "string" }
+
+      - label: "Krankenkassen"
+        name: "insurance_providers"
+        file: "data/insurance_providers.yml"
+        fields:
+          - label: "Krankenkassen"
+            name: "insurance_providers"
+            widget: "list"
+            field: { label: "Kasse", name: "", widget: "string" }
+
+      - label: "Letzte Anmeldung"
+        name: "last_checkin"
+        file: "data/last_checkin.yml"
+        fields:
+          - { label: "Menge", name: "amount", widget: "number" }
+          - { label: "Einheit", name: "unit", widget: "string" }
+          - { label: "Hinweis", name: "note", widget: "string" }
+
+      - label: "Notdienst Info"
+        name: "after_hours_info"
+        file: "data/after_hours_info.yml"
+        fields:
+          - { label: "Information", name: "after_hours_info", widget: "text" }
+
+      - label: "Fachbereich"
+        name: "medical_specialty"
+        file: "data/medical_specialty.yml"
+        fields:
+          - {
+              label: "Fachbereich",
+              name: "medical_specialty",
+              widget: "string",
+            }

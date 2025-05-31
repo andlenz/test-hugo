@@ -1,9 +1,20 @@
 services:
-  server:
-    image: hugomods/hugo:exts-non-root
-    command: server -D
-    volumes:
-      - ./:/src
-      - ~/hugo_cache:/tmp/hugo_cache
+  hugo:
+    image: ghcr.io/hugomods/hugo:latest
+    container_name: hugo-site
     ports:
-      - 1313:1313
+      - "1313:1313"
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: server --bind=0.0.0.0 --baseURL=/ --appendPort=false
+
+  decap-cms-server:
+    image: node:18-alpine
+    container_name: decap-proxy
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8081:8081"
+    entrypoint: ["npx", "decap-server"]

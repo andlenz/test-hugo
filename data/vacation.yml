@@ -1,0 +1,4 @@
+vacation:
+    enabled: true
+    start: "01.08.2025"
+    end: "15.08.2025"

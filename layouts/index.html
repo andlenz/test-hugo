@@ -1,4 +1,11 @@
-{{ $info := .Site.Data.info }}
+{{ $afterhours := .Site.Data.after_hours_info }}
+{{ $contact := .Site.Data.contact }}
+{{ $insurance := .Site.Data.insurance_providers }}
+{{ $lastcheckin := .Site.Data.last_checkin }}
+{{ $medicalspeciality := .Site.Data.medical_speciality }}
+{{ $openinghours := .Site.Data.opening_hours }}
+{{ $vacation := .Site.Data.vacation }}
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -33,22 +40,22 @@
                     <div class="logo">
                         <div></div><img src="images/dr_laube_logo.svg" alt="Dr. Laube, Facharzt für Allgemeinmedizin">
                     </div>
-                    <span class="subtitle">{{ $info.medical_specialty}}</span>
+                    <span class="subtitle">{{ $medicalspeciality.medicalspeciality}}</span>
                     <div class="address">
-                        {{ $info.contact.address.street | markdownify }}<br>
-                        {{ $info.contact.address.zipcode | markdownify }} {{ $info.contact.address.city | markdownify }}
-                        {{ partial "information/vacation.html" $info }}
+                        {{ $contact.address.street | markdownify }}<br>
+                        {{ $contact.address.zipcode | markdownify }} {{ $contact.address.city | markdownify }}
+                        {{ partial "information/vacation.html" $vacation }}
                     </div>
                 </div>
             </div>
 
             <div class="column right">
                 <div class="information">
-                    {{ partial "information/opening-hours.html" $info }}
-                    {{ partial "information/last-checkin.html" $info }}
-                    {{ partial "information/after-hours.html" $info }}
-                    {{ partial "information/health-insurance.html" $info }}
-                    {{ partial "contact/contact-buttons.html" $info }}
+                    {{ partial "information/opening-hours.html" $openinghours }}
+                    {{ partial "information/last-checkin.html" $lastcheckin }}
+                    {{ partial "information/after-hours.html" $afterhours }}
+                    {{ partial "information/health-insurance.html" $insurance }}
+                    {{ partial "contact/contact-buttons.html" $contact }}
                 </div>
             </div>
 
