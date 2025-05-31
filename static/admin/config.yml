@@ -53,7 +53,7 @@ collections:
         file: "data/opening_hours.yml"
         fields:
           - label: "Öffnungszeiten"
-            name: "opening_hours"
+            name: "days"
             widget: "list"
             summary: "{{fields.day}}"
             allow_add: false
