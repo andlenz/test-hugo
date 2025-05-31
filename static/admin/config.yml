@@ -69,7 +69,7 @@ collections:
         file: "data/insurance_providers.yml"
         fields:
           - label: "Krankenkassen"
-            name: "insurance_providers"
+            name: "providers"
             widget: "list"
             collapsed: false
             label_singular: "Insurance Provider"

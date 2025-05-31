@@ -1,6 +1,6 @@
 <div class="health-insurance">
     <h3>KRANKENKASSEN</h3>
-    {{ range . }}
-    <span class="insurance-provider">{{ . }}</span>
+    {{ range .providers }}
+    <a href="{{ .url }}" target="_blank" rel=”nofollow”><span class="insurance-provider">{{ .name }}</span></a>
     {{ end }}
 </div>

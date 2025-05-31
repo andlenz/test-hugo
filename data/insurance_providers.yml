@@ -1,4 +1,9 @@
-- ÖGK
-- KFA
-- SVS
-- BVAEB
+providers:
+    - name: ÖGK
+      url: https://www.gesundheitskasse.at
+    - name: KFA
+      url: https://www.kfawien.at/
+    - name: SVS
+      url: https://www.svs.at/  
+    - name: BVAEB
+      url: https://www.bvaeb.at
