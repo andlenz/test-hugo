@@ -2,7 +2,7 @@
 {{ $contact := .Site.Data.contact }}
 {{ $insurance := .Site.Data.insurance_providers }}
 {{ $lastcheckin := .Site.Data.last_checkin }}
-{{ $medicalspeciality := .Site.Data.medical_speciality }}
+{{ $medicalspecialty := .Site.Data.medical_specialty }}
 {{ $openinghours := .Site.Data.opening_hours }}
 {{ $vacation := .Site.Data.vacation }}
 
@@ -40,7 +40,7 @@
                     <div class="logo">
                         <div></div><img src="images/dr_laube_logo.svg" alt="Dr. Laube, Facharzt für Allgemeinmedizin">
                     </div>
-                    <span class="subtitle">{{ $medicalspeciality.medicalspeciality}}</span>
+                    <span class="subtitle">{{ $medicalspecialty.medical_specialty}}</span>
                     <div class="address">
                         {{ $contact.address.street | markdownify }}<br>
                         {{ $contact.address.zipcode | markdownify }} {{ $contact.address.city | markdownify }}
