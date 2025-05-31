@@ -13,7 +13,7 @@
         <tbody>
             {{ range .opening_hours }}
                 {{ if .enabled }}
-                <tr class="{{ if eq (lower .id) $today }}today{{ end }}">
+                <tr id="{{ lower .id }}">
                     <td class="day">{{ .day }}</td>
                     <td>{{ .morning }}</td>
                     <td>{{ .afternoon }}</td>

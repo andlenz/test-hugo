@@ -56,7 +56,7 @@ collections:
             name: "opening_hours"
             widget: "list"
             fields:
-              - { label: "ID", name: "id", widget: "string" }
+              - { label: "ID", name: "id", widget: "hidden" }
               - { label: "Tag", name: "day", widget: "string" }
               - { label: "Anzeigen", name: "enabled", widget: "boolean" }
               - { label: "Vormittag", name: "morning", widget: "string" }

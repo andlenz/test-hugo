@@ -26,7 +26,7 @@ opening_hours:
     afternoon: "-"
   - id: saturday
     day: Samstag
-    enabled: false
+    enabled: true
     morning: "-"
     afternoon: "-"
   - id: sunday
