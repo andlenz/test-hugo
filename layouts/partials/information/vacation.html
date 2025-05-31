@@ -1,10 +1,9 @@
-{{ if .vacation.enabled }}
+{{ if .enabled }}
 <label>
     <div class="alert info">
         <span class="alert-icon">ⓘ</span>
-        <span class="alert-message">Unsere Ordination ist von <strong>{{ .vacation.start }}</strong> bis einschließlich
-            <strong>{{ .vacation.end }}</strong> geschlossen.</span>
-
+        <span class="alert-message">Unsere Ordination ist von <strong>{{ .start }}</strong> bis einschließlich
+            <strong>{{ .end }}</strong> geschlossen.</span>
     </div>
 </label>
 {{ end }}

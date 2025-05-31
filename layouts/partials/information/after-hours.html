@@ -1,1 +1,10 @@
-<div class="after-hours-info">{{ .after_hours_info | safeHTML }}</div>
+{{ $notdienst := .notdienst }}
+{{ $gesundheitsberatung := .gesundheitsberatung }}
+
+{{ $notdienstLink := printf "<a href=\"tel:%d\"><strong>%d</strong></a>" $notdienst $notdienst }}
+{{ $gesundheitsberatungLink := printf "<a href=\"tel:%d\"><strong>%d</strong></a>" $gesundheitsberatung $gesundheitsberatung }}
+
+{{ $infoTemplate := .info }}
+{{ $note := replace (replace $infoTemplate "{{notdienst}}" $notdienstLink) "{{gesundheitsberatung}}" $gesundheitsberatungLink }}
+
+<div class="after-hours-info">{{ $note | safeHTML }}</div>

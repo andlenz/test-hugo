@@ -55,6 +55,8 @@ collections:
           - label: "Öffnungszeiten"
             name: "opening_hours"
             widget: "list"
+            summary: "{{fields.day}}"
+            allow_add: false
             fields:
               - { label: "ID", name: "id", widget: "hidden" }
               - { label: "Tag", name: "day", widget: "string" }
@@ -69,7 +71,9 @@ collections:
           - label: "Krankenkassen"
             name: "insurance_providers"
             widget: "list"
-            field: { label: "Kasse", name: "", widget: "string" }
+            collapsed: false
+            label_singular: "Insurance Provider"
+            field: { label: "Krankenkasse", name: "", widget: "string" }
 
       - label: "Letzte Anmeldung"
         name: "last_checkin"
@@ -91,6 +95,6 @@ collections:
         fields:
           - {
               label: "Fachbereich",
-              name: "medical_specialty",
+              name: "title",
               widget: "string",
             }

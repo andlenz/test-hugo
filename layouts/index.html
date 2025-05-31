@@ -1,4 +1,4 @@
-{{ $afterhours := .Site.Data.after_hours_info }}
+{{ $afterhours := .Site.Data.after_hours }}
 {{ $contact := .Site.Data.contact }}
 {{ $insurance := .Site.Data.insurance_providers }}
 {{ $lastcheckin := .Site.Data.last_checkin }}
@@ -41,10 +41,10 @@
                     <div class="logo">
                         <div></div><img src="images/dr_laube_logo.svg" alt="Dr. Laube, Facharzt für Allgemeinmedizin">
                     </div>
-                    <div class="subtitle">{{ $medicalspecialty.medical_specialty}}</div>
+                    <div class="subtitle">{{ $medicalspecialty.title}}</div>
                     <div class="address">
-                        {{ $contact.contact.address.street | markdownify }}<br>
-                        {{ $contact.contact.address.zipcode | markdownify }} {{ $contact.contact.address.city | markdownify }}
+                        {{ $contact.address.street | markdownify }}<br>
+                        {{ $contact.address.zipcode | markdownify }} {{ $contact.address.city | markdownify }}
                         {{ partial "information/vacation.html" $vacation }}
                     </div>
                 </div>

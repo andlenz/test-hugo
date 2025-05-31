@@ -1,4 +1,3 @@
-last_checkin:
-  amount: 10
-  unit: Minuten
-  note: Letzte Anmeldung ist bis {{amount}} {{unit}} vor Ordinationsende möglich.
+amount: 10
+unit: Minuten
+note: Letzte Anmeldung ist bis {{amount}} {{unit}} vor Ordinationsende möglich.

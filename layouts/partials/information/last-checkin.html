@@ -1,6 +1,6 @@
-{{ $amount := .last_checkin.amount }}
-{{ $unit := .last_checkin.unit }}
-{{ $noteTemplate := .last_checkin.note }}
+{{ $amount := .amount }}
+{{ $unit := .unit }}
+{{ $noteTemplate := .note }}
 {{ $amountHtml := printf "<strong>%d</strong>" $amount }}
 {{ $unitHtml := printf "<strong>%s</strong>" $unit }}
 {{ $note := replace (replace $noteTemplate "{{amount}}" $amountHtml) "{{unit}}" $unitHtml }}

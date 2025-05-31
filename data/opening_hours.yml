@@ -1,36 +1,35 @@
-opening_hours:
-  - id: monday
-    day: Montag
-    enabled: true
-    morning: "07:30–11:30"
-    afternoon: "-"
-  - id: tuesday
-    day: Dienstag
-    enabled: true
-    morning: "07:30–11:30"
-    afternoon: "16:00–18:00"
-  - id: wendsday
-    day: Mittwoch
-    enabled: true
-    morning: "07:30–11:30"
-    afternoon: "-"
-  - id: thursday
-    day: Donnerstag
-    enabled: true
-    morning: "07:30–11:30"
-    afternoon: "16:00–18:00"
-  - id: friday
-    day: Freitag
-    enabled: true
-    morning: "07:30–11:30"
-    afternoon: "-"
-  - id: saturday
-    day: Samstag
-    enabled: true
-    morning: "-"
-    afternoon: "-"
-  - id: sunday
-    day: Sonntag
-    enabled: false
-    morning: "-"
-    afternoon: "-"
+- id: monday
+  day: Montag
+  enabled: true
+  morning: "07:30 - 11:30"
+  afternoon: "-"
+- id: tuesday
+  day: Dienstag
+  enabled: true
+  morning: "07:30 - 11:30"
+  afternoon: "16:00 - 18:00"
+- id: wendsday
+  day: Mittwoch
+  enabled: true
+  morning: "07:30 - 11:30"
+  afternoon: "-"
+- id: thursday
+  day: Donnerstag
+  enabled: true
+  morning: "07:30 - 11:30"
+  afternoon: "16:00 - 18:00"
+- id: friday
+  day: Freitag
+  enabled: true
+  morning: "07:30 - 11:30"
+  afternoon: "-"
+- id: saturday
+  day: Samstag
+  enabled: false
+  morning: "-"
+  afternoon: "-"
+- id: sunday
+  day: Sonntag
+  enabled: false
+  morning: "-"
+  afternoon: "-"

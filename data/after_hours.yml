@@ -1,0 +1,4 @@
+notdienst: 141
+gesundheitsberatung: 1450
+info: "Außerhalb der Ordinationszeiten wenden Sie sich bitte telefonisch an den Ärztenotdienst unter {{notdienst}} oder die Gesundheitsberatung {{gesundheitsberatung}}."
+

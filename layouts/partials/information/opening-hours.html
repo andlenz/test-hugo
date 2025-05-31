@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody>
-            {{ range .opening_hours }}
+            {{ range . }}
                 {{ if .enabled }}
                 <tr id="{{ lower .id }}">
                     <td class="day">{{ .day }}</td>

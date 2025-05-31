@@ -1,24 +1,24 @@
 <section id="contact">
     <div class="contact">
-        <a href="tel:{{ .contact.phone | urlize }}">
+        <a href="tel:{{ .phone | urlize }}">
             <button class="contact-button">
                 <span class="contact-icon"><img src="images/icon-phone.svg" alt="Telefonnummer"></span>
-                <span>{{ .contact.phone }}</span>
+                <span>{{ .phone }}</span>
             </button>
         </a>
-        <a href="mailto:{{ .contact.email }}">
+        <a href="mailto:{{ .email }}">
             <button class="contact-button">
                 <span class="contact-icon"><img src="images/icon-email.svg" alt="E-Mail"></span>
-                <span>{{ .contact.email }}</span>
+                <span>{{ .email }}</span>
             </button>
         </a>
-        <a href="https://www.google.com/maps/search/?api=1&query={{ .contact.address.street | urlquery }}+{{ .contact.address.zipcode }}+{{ .contact.address.city | urlquery }}"
+        <a href="https://www.google.com/maps/search/?api=1&query={{ .address.street | urlquery }}+{{ .address.zipcode }}+{{ .address.city | urlquery }}"
             target="_blank">
             <button class="contact-button">
                 <span class="contact-icon"><img src="images/icon-address.svg" alt="Adresse"></span>
                 <div style="text-align: left;">
-                    {{ .contact.address.street | markdownify }} <br>
-                    {{ .contact.address.zipcode | markdownify }} {{ .contact.address.city | markdownify }}
+                    {{ .address.street | markdownify }} <br>
+                    {{ .address.zipcode | markdownify }} {{ .address.city | markdownify }}
                 </div>
             </button>
         </a>
